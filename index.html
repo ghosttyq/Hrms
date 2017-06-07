@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>主页</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main-nav.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/js/plug/dataTables/dataTables.bootstrap.css">
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plug/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/plug/dataTables/dataTables.bootstrap.js"></script>
+    <script src="assets/js/common.js"></script>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#example-navbar-collapse">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">欢迎使用人力资源管理系统</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                        <ul class="nav navbar-nav visible-sm visible-xs">
+                            <li class="active"><a href="#">首页</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    系统管理 <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="userMgr.html">用户管理</a></li>
+                                    <li><a href="jobMgr.html">职务管理</a></li>
+                                    <li><a href="employeeMgr.html">雇员管理</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="noticeMgr.html">通知管理</a></li>
+                            <li><a href="documentMgr.html">文件管理</a></li>
+                            <li><a href="#">人员统计</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-right" role="search">
+                            <a href="login.html" type="submit" class="btn btn-danger">注销
+                            </a>
+                        </form>
+                    </div>
+                </nav>
+    </section>
+    <div class="container-fluid content-wrapper">
+        <div class="row" >
+            <div class="col-md-2 hidden-sm hidden-xs">
+                <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
+                    <li class="active">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-th-large"></i>
+                            首页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            系统管理
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul id="systemSetting" class="nav nav-list collapse in secondmenu" >
+                            <li>
+                                <a href="userMgr.html">
+                                    <i class="glyphicon glyphicon-user"></i>用户管理
+                                </a>
+                            </li>
+                            <li>
+                                <a href="jobMgr.html">
+                                    <i class="glyphicon glyphicon-th-list"></i>职务管理
+                                </a>
+                            </li>
+                            <li>
+                                <a href="employeeMgr.html">
+                                    <i class="glyphicon glyphicon-asterisk"></i>雇员管理
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="noticeMgr.html">
+                            <i class="glyphicon glyphicon-credit-card"></i> 通知管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="documentMgr.html">
+                            <i class="glyphicon glyphicon-globe"></i>文件管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-calendar"></i>人员统计
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-fire"></i> 关于系统
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10 col-sm-12 col-xs-12">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12">
+                            <div id="carousel-example" class="carousel slide slide-bdr" data-ride="carousel" >
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="assets/imgs/1.jpg" alt="" />
+
+                                    </div>
+                                    <div class="item">
+                                        <img src="assets/imgs/2.jpg" alt="" />
+                                    </div>
+                                    <div class="item">
+                                        <img src="assets/imgs/3.jpg" alt="" />
+
+                                    </div>
+                                </div>
+                                <!--INDICATORS-->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example" data-slide-to="2"></li>
+                                </ol>
+                                <!--PREVIUS-NEXT BUTTONS-->
+                                <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="panel panel-primary" id="custom-media">
+                                    <div class="panel-heading">
+                                        今日通知
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="media">
+                                                <div class="pull-left">
+                                                    <img class="media-object img-rounded img-comments" src="assets/imgs/user.gif">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h5 class="media-heading"><b>张三先生</b></h5>
+                                                    <small>张三先生离开美国</small>
+                                                </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="media-object img-rounded img-comments" src="assets/imgs/user.gif">
+                                            </div>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><b>张三先生</b></h5>
+                                                <small>张三先生离开美国</small>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="media-object img-rounded img-comments" src="assets/imgs/user.gif">
+                                            </div>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><b>张三先生</b></h5>
+                                                <small>张三先生离开美国</small>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="media-object img-rounded img-comments" src="assets/imgs/user.gif">
+                                            </div>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><b>张三先生</b></h5>
+                                                <small>张三先生离开美国</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="list-group col-xs-12">
+                            <a href="#" class="list-group-item active">
+                                <strong class="list-group-item-heading">文件列表</strong>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="media">
+                                    <button class="btn-success btn pull-right">下载</button>
+                                    <strong class="media-heading">文件1</strong>
+                                    <div class="media-body">
+                                        <span class="col-md-6 text-left">发布者：张三</span>
+                                        <span class="col-md-6 text-right">发布时间：2017-01-01</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="media">
+                                    <button class="btn-success btn pull-right">下载</button>
+                                    <strong class="media-heading">文件2</strong>
+                                    <div class="media-body">
+                                        <span class="col-md-6 text-left">发布者：张三</span>
+                                        <span class="col-md-6 text-right">发布时间：2017-01-01</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="media">
+                                    <button class="btn-success btn pull-right">下载</button>
+                                    <strong class="media-heading">文件3</strong>
+                                    <div class="media-body">
+                                        <span class="col-md-6 text-left">发布者：张三</span>
+                                        <span class="col-md-6 text-right">发布时间：2017-01-01</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="media">
+                                    <button class="btn-success btn pull-right">下载</button>
+                                    <strong class="media-heading">文件4</strong>
+                                    <div class="media-body">
+                                        <span class="col-md-6 text-left">发布者：张三</span>
+                                        <span class="col-md-6 text-right">发布时间：2017-01-01</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="media">
+                                    <button class="btn-success btn pull-right">下载</button>
+                                    <strong class="media-heading">文件5</strong>
+                                    <div class="media-body">
+                                        <span class="col-md-6 text-left">发布者：张三</span>
+                                        <span class="col-md-6 text-right">发布时间：2017-01-01</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    &copy; 2017 谭亚奇.com | 更多模板
+                    <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
+                    - 收集于 <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>

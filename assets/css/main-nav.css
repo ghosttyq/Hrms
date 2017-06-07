@@ -1,0 +1,45 @@
+#main-nav { margin-left: 1px; }
+#main-nav.nav-tabs.nav-stacked > li > a
+{
+    padding: 10px 8px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #337ab7;
+    background: #E9E9E9;
+    background: -moz-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FAFAFA), color-stop(100%,#E9E9E9));
+    background: -webkit-linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
+    background: -o-linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
+    background: -ms-linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
+    background: linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9')";
+    border: 1px solid #D5D5D5; border-radius: 4px;
+}
+#main-nav.nav-tabs.nav-stacked > li > a > span { color: #337ab7; }
+#main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover
+{
+    color: #FFF;
+    background: #2e6da4;
+    background: -moz-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#337ab7), color-stop(100%,#2e6da4));
+    background: -webkit-linear-gradient(top, #337ab7 0%,#2e6da4 100%);
+    background: -o-linear-gradient(top, #337ab7 0%,#2e6da4 100%);
+    background: -ms-linear-gradient(top, #337ab7 0%,#2e6da4 100%);
+    background: linear-gradient(top, #337ab7 0%,#2e6da4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#337ab7', endColorstr='#2e6da4');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#337ab7', endColorstr='#2e6da4')";
+    border-color: #2e6da4;
+}
+#main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover > span { color: #FFF; }
+#main-nav.nav-tabs.nav-stacked > li { margin-bottom: 4px; }
+/*定义二级菜单样式*/
+.secondmenu a { font-size: 10px; color: #337ab7; text-align: center; }
+
+.navbar-brand {
+    background: url('') no-repeat 10px 8px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 50px;
+    color: #fff;
+}

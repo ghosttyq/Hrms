@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>用户管理</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main-nav.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/js/plug/dataTables/dataTables.bootstrap.css">
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plug/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/plug/dataTables/dataTables.bootstrap.js"></script>
+    <script src="assets/js/common.js"></script>
+
+</head>
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#example-navbar-collapse">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">欢迎使用人力资源管理系统</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li ><a href="index.html">首页</a></li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    系统管理 <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="userMgr.html">用户管理</a></li>
+                                    <li><a href="jobMgr.html">职务管理</a></li>
+                                    <li><a href="employeeMgr.html">雇员管理</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="noticeMgr.html">通知管理</a></li>
+                            <li><a href="documentMgr.html">文件管理</a></li>
+                            <li><a href="#">人员统计</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-right" role="search">
+                            <a href="login.html" type="submit" class="btn btn-danger">注销
+                            </a>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid content-wrapper">
+        <div class="row" >
+        <div class="col-md-2 hidden-sm hidden-xs">
+            <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
+                <li>
+                    <a href="index.html">
+                        <i class="glyphicon glyphicon-th-large"></i>
+                        首页
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        系统管理
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul id="systemSetting" class="nav nav-list collapse in secondmenu" >
+                        <li>
+                            <a href="userMgr.html">
+                                <i class="glyphicon glyphicon-user"></i>用户管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="jobMgr.html">
+                                <i class="glyphicon glyphicon-th-list"></i>职务管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="employeeMgr.html">
+                                <i class="glyphicon glyphicon-asterisk"></i>雇员管理
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="noticeMgr.html">
+                        <i class="glyphicon glyphicon-credit-card"></i> 通知管理
+                    </a>
+                </li>
+                <li>
+                    <a href="documentMgr.html">
+                        <i class="glyphicon glyphicon-globe"></i>文件管理
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-calendar"></i>人员统计
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-fire"></i> 关于系统
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10 col-sm-12 col-xs-12">
+            <div class="container-fluid">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#userModal" >
+                            <span class="glyphicon glyphicon-user"></span>新增用户</button>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead class="text-center">
+                                <tr>
+                                    <th>编码</th>
+                                    <th>登录名</th>
+                                    <th>用户名</th>
+                                    <th>状态</th>
+                                    <th>创建日期</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="odd gradeX">
+                                    <td>1</td>
+                                    <td>admin</td>
+                                    <td>超级用户</td>
+                                    <td>启用</td>
+                                    <td>2017-01-01</td>
+                                    <td style="min-width: 150px">
+                                        <span><button  class="btn btn-success btn-sm" data-toggle="modal" data-target="#userModal">修改</button></span>
+                                        <span><button  class="btn btn-success btn-sm">删除</button></span>
+                                        <span><button  class="btn btn-success btn-sm">停用</button></span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    &copy; 2017 谭亚奇.com | 更多模板
+                    <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
+                    - 收集于 <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></div>
+
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog"
+         aria-hidden="true" aria-labelledby="modalTitle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <strong id="modalTitle">用户基本信息</strong>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-xs-12 text-right">当前用户编码:<b>1</b></label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-2 text-right" for="userName">用户名</label>
+                            <div class="col-xs-10">
+                                <input type="text" class="form-control text-left" id="userName" placeholder="请输入用户名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-xs-2 text-right" for="loginName">登录名</label>
+                            <div class="col-xs-10">
+                                <input type="text" class="form-control text-left" id="loginName" placeholder="请设置登录名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="pull-right" style="padding-right: 15px">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-save"></span>保存
+                                </button>
+                                <button type="close" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-off"></span>取消
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
